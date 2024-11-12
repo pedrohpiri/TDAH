@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de TDAH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/quiz-styles.css">
+</head>
+<body>
+    <div class="quiz-wrapper">
+        <!-- Barra de Progresso -->
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <!-- Container Principal -->
+        <div class="quiz-container">
+            <!-- Tela de Questões -->
+            <div class="quiz-screen active" id="questions-screen">
+                <div class="question-content">
+                    <h2 id="question-text"></h2>
+                    <div class="options-container">
+                        <button class="option-btn">Nunca</button>
+                        <button class="option-btn">Raramente</button>
+                        <button class="option-btn">Às vezes</button>
+                        <button class="option-btn">Frequentemente</button>
+                        <button class="option-btn">Muito Frequentemente</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tela de Carregamento -->
+            <div class="quiz-screen" id="loading-screen">
+                <div class="loading-content">
+                    <div class="loading-spinner"></div>
+                    <p>Analisando suas respostas...</p>
+                </div>
+            </div>
+
+            <!-- Tela de Resultados -->
+            <div class="quiz-screen" id="results-screen">
+                <div class="results-content">
+                    <h2>Resultado da sua Avaliação</h2>
+                    <div class="score-container">
+                        <div class="score-circle"></div>
+                    </div>
+                    <div class="result-description"></div>
+
+                    <!-- Seção de Planos (inicialmente oculta) -->
+                    <div class="plans-section" style="display: none;">
+                        <h3>Escolha o Melhor Plano para Você</h3>
+                        <div class="plans-container">
+                            <!-- Plano Básico -->
+                            <div class="plan-card">
+                                <h4>Plano Básico</h4>
+                                <div class="plan-price">R$ 97</div>
+                                <div class="plan-type">Pagamento único</div>
+                                <ul class="plan-features">
+                                    <li>Acesso ao curso completo</li>
+                                    <li>Material de apoio</li>
+                                    <li>Exercícios práticos</li>
+                                </ul>
+                                <a href="https://pay.kirvano.com/4f5c71dc-5717-4e9e-b4fb-cb531e660ab2?aff=8660d1f1-9f83-423b-b47e-f6e62bf9e865" 
+                                   class="plan-button">
+                                    Começar Agora
+                                </a>
+                            </div>
+
+                            <!-- Plano Completo -->
+                            <div class="plan-card featured">
+                                <span class="featured-tag">Recomendado</span>
+                                <h4>Plano Completo</h4>
+                                <div class="plan-price">R$ 197</div>
+                                <div class="plan-type">Pagamento único</div>
+                                <ul class="plan-features">
+                                    <li>Tudo do Plano Básico</li>
+                                    <li>Módulos avançados</li>         
+                                    <li>Acesso vitalício</li>
+                                </ul>
+                                <a href="https://pay.kirvano.com/579a47c2-4095-4070-b84c-f6d1b1a50893?aff=8660d1f1-9f83-423b-b47e-f6e62bf9e865" 
+                                   class="plan-button featured">
+                                    Garantir Acesso Completo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/quiz.js"></script>
+</body>
+</html>
