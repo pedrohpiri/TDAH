@@ -409,6 +409,7 @@ body {
         padding: 20px;
     }
 }
+
 /* Sistema de Notificações */
 .notifications-container {
     position: fixed;
@@ -418,7 +419,8 @@ body {
 }
 
 .notification {
-    display: none; /* Começa oculto */
+    display: none;
+    /* Começa oculto */
     align-items: center;
     background: white;
     padding: 15px;

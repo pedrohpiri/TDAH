@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         question.addEventListener('click', () => {
             // Pega o elemento pai (faq-item)
             const faqItem = question.parentElement;
-            
+
             // Toggle da classe active no item clicado
             faqItem.classList.toggle('active');
         });
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Pop-up de Boas-vindas
     const popup = document.getElementById('welcomePopup');
     const closeBtn = document.getElementById('closePopup');
-    
+
     // Mostra o pop-up após 5 segundos
     setTimeout(() => {
         popup.classList.add('show');
@@ -95,14 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
             ];
             this.totalNotification = document.getElementById('totalNotification');
             this.purchaseNotification = document.getElementById('purchaseNotification');
-            
+
             this.initialize();
         }
 
         initialize() {
             // Mostra total de usuários após 10 segundos
             setTimeout(() => this.showTotalUsers(), 10000);
-            
+
             // Inicia sistema de notificações de compra
             this.startPurchaseNotifications();
         }
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showNotification(element) {
             element.style.display = 'flex';
             setTimeout(() => element.classList.add('show'), 100);
-            
+
             setTimeout(() => {
                 element.classList.remove('show');
                 setTimeout(() => {
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Primeira notificação após 15 segundos
             setTimeout(() => {
                 this.showPurchaseNotification();
-                
+
                 // Depois mostra a cada 20-40 segundos
                 setInterval(() => {
                     this.showPurchaseNotification();

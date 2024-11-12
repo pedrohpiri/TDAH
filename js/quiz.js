@@ -177,7 +177,7 @@ class TDAHQuiz {
                 const isComplete = button.classList.contains('featured');
                 const planType = isComplete ? 'Completo' : 'Básico';
                 const value = isComplete ? 197 : 97;
-                
+
                 trackEvent('Conversion', 'plan_selected', planType, value);
             });
         });
@@ -188,7 +188,7 @@ class TDAHQuiz {
 if (typeof document !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
         new TDAHQuiz();
-    
+
         // Tracking de tempo na página
         let timeSpent = 0;
         const timeInterval = setInterval(() => {
