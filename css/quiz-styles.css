@@ -41,7 +41,7 @@ body {
     margin: 40px auto;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -118,8 +118,13 @@ body {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Tela de Resultados */
@@ -335,5 +340,88 @@ body {
 
     .score-number {
         font-size: 30px;
+    }
+}
+
+/* Adicione ao final do seu arquivo CSS */
+
+/* Otimizações de performance */
+.quiz-screen {
+    content-visibility: auto;
+    contain-intrinsic-size: 500px;
+}
+
+/* Melhorias de acessibilidade */
+.option-btn:focus {
+    outline: 3px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Melhorias visuais para conversão */
+.plan-card.featured {
+    position: relative;
+    overflow: hidden;
+}
+
+.plan-card.featured::before {
+    content: 'Mais Recomendado';
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: #3498db;
+    color: white;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Animação suave do loading */
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Otimizações para mobile */
+@media (max-width: 768px) {
+    .quiz-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .option-btn {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .plan-card {
+        margin: 10px 0;
+    }
+}
+
+/* Melhorias de acessibilidade para modo escuro */
+@media (prefers-color-scheme: dark) {
+    .quiz-container {
+        background: #2c3e50;
+        color: #fff;
+    }
+
+    .option-btn {
+        background: #34495e;
+        color: #fff;
+        border-color: #3498db;
+    }
+
+    .option-btn:hover {
+        background: #2980b9;
     }
 }

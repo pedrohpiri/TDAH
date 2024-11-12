@@ -6,6 +6,36 @@
     <title>Teste de TDAH</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/quiz-styles.css">
+<!-- Adicione logo após a tag title -->
+<meta name="description" content="Avalie seus sintomas de TDAH com nosso teste especializado e receba um plano personalizado para suas necessidades.">
+<meta name="keywords" content="teste tdah, avaliação tdah, sintomas tdah, déficit atenção">
+<meta name="robots" content="noindex, follow"> <!-- Importante: noindex pois é uma página de resultado -->
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=SEU-ID-AQUI"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'SEU-ID-AQUI');
+</script>
+
+<!-- Schema.org para Quiz -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": "Teste de TDAH",
+    "description": "Avaliação personalizada de sintomas de TDAH",
+    "educationalAlignment": {
+        "@type": "AlignmentObject",
+        "alignmentType": "assessmentMethod",
+        "educationalFramework": "TDAH Screening",
+        "targetName": "Avaliação de Sintomas de TDAH"
+    }
+}
+</script>
+
 </head>
 <body>
     <div class="quiz-wrapper">
