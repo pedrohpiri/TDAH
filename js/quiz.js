@@ -1,3 +1,71 @@
+// Adicione no início do seu arquivo JavaScript
+
+// Tracking de eventos
+function trackEvent(category, action, label) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', action, {
+            'event_category': category,
+            'event_label': label
+        });
+    }
+}
+
+// Tracking de scroll
+function trackScroll() {
+    let scrolled = false;
+    let timer = null;
+
+    window.addEventListener('scroll', () => {
+        if (timer !== null) {
+            clearTimeout(timer);
+        }
+
+        timer = setTimeout(() => {
+            if (!scrolled) {
+                scrolled = true;
+                trackEvent('Engagement', 'scroll', 'User scrolled page');
+            }
+        }, 1000);
+    });
+}
+
+// Tracking de tempo na página
+function trackTimeSpent() {
+    const intervals = [30, 60, 120, 180]; // segundos
+    let currentInterval = 0;
+
+    const timer = setInterval(() => {
+        if (currentInterval < intervals.length) {
+            trackEvent('Engagement', 'time_spent', `${intervals[currentInterval]} seconds`);
+            currentInterval++;
+        } else {
+            clearInterval(timer);
+        }
+    }, intervals[0] * 1000);
+}
+
+// Tracking de cliques nos CTAs
+document.querySelectorAll('.cta-button').forEach(button => {
+    button.addEventListener('click', function (e) {
+        trackEvent('CTA', 'click', this.textContent.trim());
+    });
+});
+
+// Tracking do FAQ
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function () {
+        trackEvent('FAQ', 'open', this.textContent.trim());
+    });
+});
+
+// Inicialização
+document.addEventListener('DOMContentLoaded', () => {
+    trackScroll();
+    trackTimeSpent();
+});
+
+// Seu código JavaScript existente continua aqui...
+
 class TDAHQuiz {
     constructor() {
         this.currentQuestion = 0;
@@ -38,7 +106,7 @@ class TDAHQuiz {
     showQuestion() {
         this.questionText.textContent = this.questions[this.currentQuestion];
         this.updateProgress();
-        
+
         document.querySelectorAll('.option-btn').forEach(btn => {
             btn.classList.remove('selected');
         });
@@ -84,16 +152,16 @@ class TDAHQuiz {
     calculateAndShowResults() {
         const maxScore = this.questions.length * 4;
         const percentage = Math.round((this.score / maxScore) * 100);
-    
+
         this.hideAllScreens();
         this.resultScreen.classList.add('active');
-        
+
         // Atualiza o círculo de resultado
         document.querySelector('.score-circle').innerHTML = `
             <span class="score-number">${percentage}%</span>
             <span class="score-label">Probabilidade<br>de TDAH</span>
         `;
-    
+
         // Define a descrição com base no percentual
         let description;
         if (percentage >= 70) {
@@ -103,9 +171,9 @@ class TDAHQuiz {
         } else {
             description = "Seus resultados indicam poucos sintomas de TDAH. No entanto, desenvolver técnicas de foco e organização pode beneficiar qualquer pessoa.";
         }
-    
+
         document.querySelector('.result-description').textContent = description;
-    
+
         // Mostra os planos após mostrar o resultado
         setTimeout(() => {
             const plansSection = document.querySelector('.plans-section');

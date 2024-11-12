@@ -120,7 +120,7 @@ body {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .stars {
@@ -233,5 +233,48 @@ body {
     .benefits-grid,
     .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Otimizações para SEO e acessibilidade */
+.skip-to-main-content {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: white;
+    color: black;
+    opacity: 0;
+}
+
+.skip-to-main-content:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+/* Melhorias de performance */
+.hero,
+.benefits,
+.testimonials,
+.faq,
+.cta {
+    content-visibility: auto;
+    contain-intrinsic-size: 700px;
+}
+
+/* Melhorias de acessibilidade */
+.cta-button:focus,
+.faq-question:focus {
+    outline: 3px solid #3498db;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
