@@ -178,18 +178,50 @@
         </div>
     </section>
 
-    <!-- Banner de Garantia -->
-    <div class="guarantee-banner">
-        <i class="fas fa-check-circle"></i>
-        Garantia de 7 dias ou seu dinheiro de volta!
+   <!-- Banner de Garantia -->
+   <div class="guarantee-banner">
+    <i class="fas fa-check-circle"></i>
+    Garantia de 7 dias ou seu dinheiro de volta!
+</div>
+
+<!-- Pop-up de Boas-vindas -->
+<div class="popup-overlay" id="welcomePopup">
+    <div class="popup-content">
+        <button class="popup-close" id="closePopup">&times;</button>
+        <div class="popup-header">
+            <h3>Avaliação Gratuita de TDAH!</h3>
+            <p class="popup-subtitle">Descubra Seu Nível de TDAH em Apenas 5 Minutos</p>
+        </div>
+        <div class="popup-body">
+            <div class="popup-features">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Teste Personalizado</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Resultado Instantâneo</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Plano de Ação Personalizado</span>
+                </div>
+            </div>
+            <div class="countdown">
+                <p>Oferta Especial - Expira em:</p>
+                <div class="countdown-timer">
+                    <span id="minutes">10</span>:<span id="seconds">00</span>
+                </div>
+            </div>
+            <button class="popup-button" onclick="window.location.href='quiz.html'">
+                FAZER MEU TESTE AGORA
+            </button>
+            <p class="popup-disclaimer">Mais de 2.000 pessoas já realizaram o teste!</p>
+        </div>
     </div>
+</div>
 
-    <!-- Script JavaScript -->
-    <!-- Mude esta linha no final do seu HTML, antes do </body> -->
-    <script src="./js/script.js" defer></script>
+<!-- Script JavaScript -->
+<script src="./js/script.js" defer></script>
 </body>
-
-</html>
-</body>
-
 </html>
