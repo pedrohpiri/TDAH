@@ -1,7 +1,7 @@
 // Função segura para tracking de eventos
 function trackEvent(category, action, label, value) {
     // Verifica se gtag existe e se estamos em um ambiente de navegador
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
+    if (typeof window !== 'undefined' && typeof gtag === 'function') {
         gtag('event', action, {
             'event_category': category,
             'event_label': label,
@@ -142,17 +142,16 @@ class TDAHQuiz {
             `;
         }
 
-        // Define a descrição e recomendação com base no percentual
         let description, recommendation;
         if (percentage >= 70) {
-            description = "Seus resultados sugerem uma forte presença de sintomas de TDAH. Seria benéfico desenvolver estratégias para melhorar seu foco e organização.";
-            recommendation = "Para sintomas significativos como os seus, recomendamos fortemente o Plano Completo.";
+            description = "Seus resultados sugerem uma forte presença de sintomas de TDAH.";
+            recommendation = "Recomendamos o Plano Completo.";
         } else if (percentage >= 40) {
-            description = "Seus resultados sugerem a presença de alguns sintomas de TDAH. Seria benéfico desenvolver estratégias para melhorar seu foco e organização.";
-            recommendation = "Com base nos seus resultados, o Plano Completo ofereceria as ferramentas mais adequadas.";
+            description = "Seus resultados sugerem a presença de alguns sintomas de TDAH.";
+            recommendation = "O Plano Completo pode ajudar.";
         } else {
-            description = "Seus resultados indicam poucos sintomas de TDAH. No entanto, desenvolver técnicas de foco e organização pode beneficiar qualquer pessoa.";
-            recommendation = "Para começar sua jornada, o Plano Básico oferece um excelente conjunto de ferramentas.";
+            description = "Seus resultados indicam poucos sintomas de TDAH.";
+            recommendation = "O Plano Básico é uma boa opção.";
         }
 
         const resultDescription = document.querySelector('.result-description');
@@ -160,7 +159,6 @@ class TDAHQuiz {
             resultDescription.textContent = description;
         }
 
-        // Mostra os planos após mostrar o resultado
         setTimeout(() => {
             const plansSection = document.querySelector('.plans-section');
             if (plansSection) {
