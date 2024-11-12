@@ -409,3 +409,91 @@ body {
         padding: 20px;
     }
 }
+/* Sistema de Notificações */
+.notifications-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.notification {
+    display: none; /* Começa oculto */
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    max-width: 300px;
+}
+
+.notification.show {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification-icon {
+    background: #e8f4ff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.notification-icon i {
+    color: #3498db;
+    font-size: 20px;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+    font-size: 14px;
+}
+
+.notification-text {
+    color: #666;
+    margin: 3px 0 0 0;
+    font-size: 13px;
+}
+
+/* Estilos específicos para cada tipo de notificação */
+.total-users .notification-icon {
+    background: #e8f7ef;
+}
+
+.total-users .notification-icon i {
+    color: #27ae60;
+}
+
+.purchase-notification .notification-icon {
+    background: #fff4e8;
+}
+
+.purchase-notification .notification-icon i {
+    color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .notifications-container {
+        left: 10px;
+        right: 10px;
+    }
+
+    .notification {
+        margin: 0 10px 10px;
+    }
+}
