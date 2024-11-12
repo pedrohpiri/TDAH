@@ -409,19 +409,3 @@ body {
 }
 
 /* Melhorias de acessibilidade para modo escuro */
-@media (prefers-color-scheme: dark) {
-    .quiz-container {
-        background: #2c3e50;
-        color: #fff;
-    }
-
-    .option-btn {
-        background: #34495e;
-        color: #fff;
-        border-color: #3498db;
-    }
-
-    .option-btn:hover {
-        background: #2980b9;
-    }
-}
