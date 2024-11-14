@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,6 +112,7 @@
     }
     </script>
 </head>
+
 <body>
     <!-- Header -->
     <header class="main-header">
@@ -121,9 +123,11 @@
                     <text x="5" y="28" fill="#3498db" font-family="Arial" font-weight="bold" font-size="24">
                         Controle TDAH
                     </text>
-                    <path d="M2,30 Q90,10 178,30" stroke="#3498db" stroke-width="2" fill="none" opacity="0.3"/>
+                    <path d="M2,30 Q90,10 178,30" stroke="#3498db" stroke-width="2" fill="none" opacity="0.3" />
                 </svg>
             </div>
+
+
 
             <!-- Menu Hamburguer Mobile -->
             <button class="menu-toggle" id="menuToggle">
@@ -172,6 +176,86 @@
                     <i class="fas fa-clock"></i>
                     <h3>Melhor Gestão do Tempo</h3>
                     <p>Organize seu dia de forma eficiente e produtiva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Recursos Educacionais -->
+    <section class="resources" id="recursos">
+        <div class="container">
+            <h2>Conteúdo Especializado sobre TDAH</h2>
+            <div class="resources-grid">
+                <!-- Coluna 1: Vídeo -->
+                <div class="resource-card video">
+                    <h3><i class="fas fa-play-circle"></i> Entenda o TDAH</h3>
+                    <div class="video-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/XfAp8_706OU?si=qurohj8fuUEQx9j1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="video-description">
+                        Assosciação Brasileira do Défict de Atenção, Vídeo com depoimentos de pessoas com TDAH, seus
+                        familiares e profissionais de saúde e educação.
+                </div>
+
+                <!-- Coluna 2: Artigos -->
+                <div class="resource-card articles">
+                    <h3><i class="fas fa-book-medical"></i> Artigos Científicos</h3>
+                    <ul class="article-list">
+                        <li>
+                            <a href="https://www.scielo.br/j/pee/a/G4mGnPctSwHkLZgMn8hZs7b/" target="_blank"
+                                rel="noopener">
+                                <i class="fas fa-file-alt"></i>
+                                <div class="article-info">
+                                    <span class="article-title">TDAH: Diagnóstico e Tratamento orientações para a família</span>
+                                    <span class="article-source">Revista Brasileira de Psiquiatria</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://veja.abril.com.br/coluna/conta-gotas/um-guia-para-navegar-em-meio-a-epidemia-de-tdah"
+                                target="_blank" rel="noopener">
+                                <i class="fas fa-hospital"></i>
+                                <div class="article-info">
+                                    <span class="article-title">Guia Completo sobre TDAH</span>
+                                    <span class="article-source">Os Psiquiatras John Ratey e Edward Hallowell </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://vidasaudavel.einstein.br/tdah-conheca-18-sinais-que-indicam-deficit-de-atencao-com-hiperatividade/"
+                                target="_blank" rel="noopener">
+                                <i class="fas fa-stethoscope"></i>
+                                <div class="article-info">
+                                    <span class="article-title">TDAH: O que você precisa saber</span>
+                                    <span class="article-source">Vida Saudável o Blog do einstein</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Estatísticas -->
+                <div class="resource-card statistics">
+                    <h3><i class="fas fa-chart-bar"></i> Dados e Estatísticas</h3>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <div class="stat-number">5%</div>
+                            <div class="stat-description">Das crianças no mundo têm TDAH</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2.8%</div>
+                            <div class="stat-description">Dos adultos são diagnosticados</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">80%</div>
+                            <div class="stat-description">Melhoram com tratamento adequado</div>
+                        </div>
+                    </div>
+                    <p class="stats-source">Fonte: Organização Mundial da Saúde</p>
                 </div>
             </div>
         </div>
@@ -327,4 +411,5 @@
     <!-- Script JavaScript -->
     <script src="./js/script.js" defer></script>
 </body>
+
 </html>
