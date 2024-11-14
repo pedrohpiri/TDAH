@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +14,13 @@
     <meta name="keywords"
         content="TDAH, teste TDAH, déficit de atenção, hiperatividade, foco, concentração, procrastinação">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://seusite.com" />
+    <link rel="canonical" href="https://controleseutdah.com" />
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Teste de TDAH Online Gratuito | Programa Personalizado">
     <meta property="og:description"
         content="Transforme sua vida com um plano personalizado para TDAH. Faça o teste gratuito agora!">
-    <meta property="og:url" content="https://seusite.com">
+    <meta property="og:url" content="https://controleseutdah.com">
     <meta property="og:type" content="website">
 
     <!-- Google Analytics -->
@@ -37,25 +36,81 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Programa TDAH Personalizado",
+        "@type": "WebSite",
+        "name": "Controle TDAH",
         "description": "Programa personalizado para pessoas com TDAH melhorarem foco e organização",
+        "url": "https://controleseutdah.com",
+        "potentialAction": {
+            "@type": "ReviewAction",
+            "target": "https://controleseutdah.com/quiz.html",
+            "result": {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Maria Silva"
+                }
+            }
+        },
         "offers": {
             "@type": "AggregateOffer",
             "lowPrice": "97",
             "highPrice": "197",
             "priceCurrency": "BRL",
-            "offerCount": "1"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "2"
+            "offerCount": "2"
         }
     }
     </script>
-</head>
 
+    <!-- Schema.org markup para os depoimentos -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Programa TDAH Personalizado",
+        "description": "Programa personalizado para pessoas com TDAH melhorarem foco e organização",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "2",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Maria Silva"
+                },
+                "reviewBody": "O programa mudou completamente minha vida. Agora consigo manter o foco e organizar melhor meu dia."
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "João Santos"
+                },
+                "reviewBody": "Depois do quiz personalizado, recebi exatamente as ferramentas que precisava. Incrível!"
+            }
+        ]
+    }
+    </script>
+</head>
 <body>
     <!-- Header -->
     <header class="main-header">
@@ -191,7 +246,6 @@
             </div>
         </div>
     </section>
-
     <!-- Seção CTA Final -->
     <section class="cta">
         <div class="container">
@@ -273,5 +327,4 @@
     <!-- Script JavaScript -->
     <script src="./js/script.js" defer></script>
 </body>
-
 </html>
