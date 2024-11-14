@@ -35,29 +35,58 @@
 
     <!-- Schema.org markup -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "Programa TDAH Personalizado",
-            "description": "Programa personalizado para pessoas com TDAH melhorarem foco e organização",
-            "offers": {
-                "@type": "AggregateOffer",
-                "lowPrice": "97",
-                "highPrice": "197",
-                "priceCurrency": "BRL",
-                "offerCount": "1"
-            },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5",
-                "reviewCount": "2"
-            }
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Programa TDAH Personalizado",
+        "description": "Programa personalizado para pessoas com TDAH melhorarem foco e organização",
+        "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "97",
+            "highPrice": "197",
+            "priceCurrency": "BRL",
+            "offerCount": "1"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "2"
         }
-        </script>
-        
+    }
+    </script>
 </head>
 
 <body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <!-- Logo SVG -->
+            <div class="logo">
+                <svg width="180" height="40" viewBox="0 0 180 40">
+                    <text x="5" y="28" fill="#3498db" font-family="Arial" font-weight="bold" font-size="24">
+                        Controle TDAH
+                    </text>
+                    <path d="M2,30 Q90,10 178,30" stroke="#3498db" stroke-width="2" fill="none" opacity="0.3"/>
+                </svg>
+            </div>
+
+            <!-- Menu Hamburguer Mobile -->
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Menu de Navegação -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li class="nav-cta"><a href="quiz.html" class="nav-button">Fazer Teste</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <!-- Seção Hero -->
     <section class="hero">
         <div class="container">
@@ -70,7 +99,7 @@
     </section>
 
     <!-- Seção Benefícios -->
-    <section class="benefits">
+    <section class="benefits" id="beneficios">
         <div class="container">
             <h2>Benefícios do Nosso Programa</h2>
             <div class="benefits-grid">
@@ -92,9 +121,8 @@
             </div>
         </div>
     </section>
-
     <!-- Seção Depoimentos -->
-    <section class="testimonials">
+    <section class="testimonials" id="depoimentos">
         <div class="container">
             <h2>O Que Nossos Clientes Dizem</h2>
             <div class="testimonials-grid">
@@ -126,7 +154,7 @@
     </section>
 
     <!-- Seção FAQ -->
-    <section class="faq">
+    <section class="faq" id="faq">
         <div class="container">
             <h2>Perguntas Frequentes</h2>
             <div class="faq-list">
