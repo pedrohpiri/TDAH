@@ -35,37 +35,79 @@
 
     <!-- Schema.org markup -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Controle TDAH",
-        "description": "Programa personalizado para pessoas com TDAH melhorarem foco e organização",
-        "url": "https://controleseutdah.com",
-        "potentialAction": {
-            "@type": "ReviewAction",
-            "target": "https://controleseutdah.com/quiz.html",
-            "result": {
-                "@type": "Review",
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                },
-                "author": {
-                    "@type": "Person",
-                    "name": "Maria Silva"
-                }
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Controle TDAH",
+            "description": "Programa personalizado para pessoas com TDAH melhorarem foco e organização",
+            "url": "https://controleseutdah.com",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://controleseutdah.com/quiz.html",
+                "query-input": "required name=search_term_string"
+            },
+            "offers": {
+                "@type": "AggregateOffer",
+                "lowPrice": "97",
+                "highPrice": "197",
+                "priceCurrency": "BRL",
+                "offerCount": "2"
             }
-        },
-        "offers": {
-            "@type": "AggregateOffer",
-            "lowPrice": "97",
-            "highPrice": "197",
-            "priceCurrency": "BRL",
-            "offerCount": "2"
         }
-    }
-    </script>
+        </script>
+        
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": "Programa TDAH Personalizado",
+                "description": "Programa personalizado para pessoas com TDAH melhorarem foco e organização",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5",
+                    "reviewCount": "2",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "review": [
+                    {
+                        "@type": "Review",
+                        "itemReviewed": {
+                            "@type": "Product",
+                            "name": "Programa TDAH Personalizado"
+                        },
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5",
+                            "bestRating": "5"
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": "Maria Silva"
+                        },
+                        "reviewBody": "O programa mudou completamente minha vida. Agora consigo manter o foco e organizar melhor meu dia."
+                    },
+                    {
+                        "@type": "Review",
+                        "itemReviewed": {
+                            "@type": "Product",
+                            "name": "Programa TDAH Personalizado"
+                        },
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5",
+                            "bestRating": "5"
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": "João Santos"
+                        },
+                        "reviewBody": "Depois do quiz personalizado, recebi exatamente as ferramentas que precisava. Incrível!"
+                    }
+                ]
+            }
+            </script>
+        
 
     <!-- Schema.org markup para os depoimentos -->
     <script type="application/ld+json">
