@@ -28,12 +28,18 @@
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=SEU-ID-AQUI"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'SEU-ID-AQUI');
-    </script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    // Configuração para lidar com o consentimento
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'granted'
+    });
+    gtag('config', 'G-JJ6LTC53KG');
+</script>
 
     <!-- Schema.org markup -->
     <script type="application/ld+json">
