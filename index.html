@@ -121,6 +121,12 @@
 </head>
 
 <body>
+    <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #333; color: white; padding: 10px; text-align: center; z-index: 1000;">
+        Este site utiliza cookies para melhorar sua experiência. <a href="/politica-de-privacidade" style="color: #4CAF50;">Saiba mais</a>.
+        <button id="accept-cookies" style="background: #4CAF50; color: white; border: none; padding: 5px 10px; cursor: pointer; margin-left: 10px;">Aceitar</button>
+    </div>
+    
+
     <!-- Header -->
     <header class="main-header">
         <div class="container header-container">
@@ -416,7 +422,19 @@
         </div>
     </div>
     
-
+    <script>
+        document.getElementById('accept-cookies').addEventListener('click', function () {
+            document.getElementById('cookie-banner').style.display = 'none';
+            // Aqui você pode salvar o consentimento do usuário no localStorage ou cookies
+            localStorage.setItem('cookiesAccepted', 'true');
+        });
+    
+        // Verifica se o consentimento já foi dado
+        if (localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+    
 
     <!-- Script JavaScript -->
     <script src="./js/script.js" defer></script>
